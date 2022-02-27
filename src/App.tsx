@@ -4,10 +4,9 @@
  * @Date: 2022/02/26
  * @LastEditTime: 2022/02/27
  */
-import React from "react";
-import logo from "./logo.svg";
-import Test from "@/components/counter";
-import "./App.css";
+import React from 'react';
+import Test from '@/components/counter';
+import './App.css';
 
 function App() {
   return (

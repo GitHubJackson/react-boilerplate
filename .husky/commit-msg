@@ -1,0 +1,5 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo "========= 校验 commit-msg ======="
+yarn commitlint --edit $1
