@@ -2,9 +2,10 @@
  * @Desc:
  * @Author: JacksonZhou
  * @Date: 2022/02/27
- * @LastEditTime: 2022/02/27
+ * @LastEditTime: 2022/03/15
  */
-import React, { useState } from 'react';
+import { useState } from 'react';
+import { Button } from 'antd';
 import styles from './index.module.less';
 
 function Counter() {
@@ -12,13 +13,9 @@ function Counter() {
 
   return (
     <div className={styles['container']}>
-      <button className={styles['btn']} onClick={() => setCount(count + 1)}>
-        +
-      </button>
+      <Button onClick={() => setCount(count + 1)}>+</Button>
       <div className={styles['count']}>{count}</div>
-      <button className={styles['btn']} onClick={() => setCount(count - 1)}>
-        -
-      </button>
+      <Button onClick={() => setCount(count - 1)}>-</Button>
     </div>
   );
 }

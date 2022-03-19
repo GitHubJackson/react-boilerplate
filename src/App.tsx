@@ -2,19 +2,40 @@
  * @Desc:
  * @Author: JacksonZhou
  * @Date: 2022/02/26
- * @LastEditTime: 2022/02/27
+ * @LastEditTime: 2022/03/15
  */
-import React from 'react';
-import Test from '@/components/counter';
+import { Suspense } from 'react';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from 'react-router-dom';
+import { routers } from './routers';
+import 'antd/dist/antd.min.css';
 import './App.css';
 
 function App() {
+  const FallbackComponent = null;
   return (
-    <div className="App">
-      <header className="App-header">
-        <Test></Test>
-      </header>
-    </div>
+    <Router>
+      <Suspense fallback={FallbackComponent}>
+        <Routes>
+          {routers.length > 0 &&
+            routers.map((router) => {
+              return (
+                <Route
+                  path={router.path}
+                  element={<router.component />}
+                  key={router.path}
+                />
+              );
+            })}
+          {/* 路由重定向 */}
+          <Route path="*" element={<Navigate to="/" />} />
+        </Routes>
+      </Suspense>
+    </Router>
   );
 }
 
