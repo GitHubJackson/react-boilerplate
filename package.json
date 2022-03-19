@@ -34,6 +34,7 @@
     "build": "dotenv -e env/.env.prod react-app-rewired build",
     "build:prod": "dotenv -e env/.env.prod react-app-rewired build",
     "test": "react-app-rewired test",
+    "mock": "nodemon src/mock/server.js",
     "eject": "react-scripts eject",
     "prepare": "husky install",
     "precommit": "eslint src/**/*"
@@ -74,9 +75,14 @@
     "eslint": "^8.10.0",
     "eslint-plugin-react": "^7.29.2",
     "husky": "^7.0.4",
+    "koa": "^2.13.4",
+    "koa-bodyparser": "^4.3.0",
+    "koa-router": "^10.1.1",
     "less": "^4.1.2",
     "less-loader": "^10.2.0",
     "lint-staged": "^12.3.4",
+    "mockjs": "^1.1.0",
+    "nodemon": "^2.0.15",
     "prettier": "^2.5.1",
     "stylelint": "^14.5.3",
     "stylelint-config-standard": "^25.0.0"
