@@ -2,9 +2,13 @@
  * @Desc:
  * @Author: JacksonZhou
  * @Date: 2022/02/27
- * @LastEditTime: 2022/03/13
+ * @LastEditTime: 2022/04/26
  */
-const { override, addWebpackAlias } = require('customize-cra');
+const {
+  override,
+  addWebpackAlias,
+  adjustStyleLoaders,
+} = require('customize-cra');
 const path = require('path');
 const addLessLoader = require('customize-cra-less-loader');
 
@@ -22,5 +26,16 @@ module.exports = override(
       sourceMap: false,
       // modifyVars: { '@primary-color': '#1DA57A' },
     },
+  }),
+  adjustStyleLoaders((rule) => {
+    if (rule.test.toString().includes('less')) {
+      rule.use.push({
+        loader: 'style-resources-loader',
+        options: {
+          patterns: path.resolve(__dirname, 'src/styles/global.less'),
+          injector: 'append',
+        },
+      });
+    }
   }),
 );

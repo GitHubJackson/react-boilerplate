@@ -44,6 +44,10 @@
       "prettier --write",
       "eslint --cache --fix",
       "git add"
+    ],
+    "src/**/*.{less,css}": [
+      "stylelint --fix",
+      "git add"
     ]
   },
   "eslintConfig": {
@@ -83,7 +87,9 @@
     "lint-staged": "^12.3.4",
     "mockjs": "^1.1.0",
     "nodemon": "^2.0.15",
+    "postcss-less": "^6.0.0",
     "prettier": "^2.5.1",
+    "style-resources-loader": "^1.5.0",
     "stylelint": "^14.5.3",
     "stylelint-config-standard": "^25.0.0"
   },
