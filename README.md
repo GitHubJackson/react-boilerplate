@@ -9,6 +9,7 @@
 - 环境配置（dotenv）
 - Mock server（mockjs）
 - 异常监控（sentry）
+- 单元测试（jest）
 - 其他
   - 路径 alias
   - 全局 less 变量
