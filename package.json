@@ -37,7 +37,9 @@
     "mock": "nodemon src/mock/server.js",
     "eject": "react-scripts eject",
     "prepare": "husky install",
-    "precommit": "eslint src/**/*"
+    "eslint": "eslint --fix src/**/*.{js,ts,jsx,tsx}",
+    "stylelint": "stylelint --fix src/**/*.{css,less}",
+    "prettier": "prettier --write src/**/*.{js,ts,jsx,tsx,less,css}"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx}": [
