@@ -1,9 +1,3 @@
-/*
- * @Desc:
- * @Author: JacksonZhou
- * @Date: 2022/03/13
- * @LastEditTime: 2022/03/15
- */
 import React from 'react';
 
 const LazyCounter = React.lazy(() => import('@/components/counter'));

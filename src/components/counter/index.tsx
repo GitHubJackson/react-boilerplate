@@ -1,9 +1,3 @@
-/*
- * @Desc:
- * @Author: JacksonZhou
- * @Date: 2022/02/27
- * @LastEditTime: 2022/03/15
- */
 import { useState } from 'react';
 import { Button } from 'antd';
 import styles from './index.module.less';

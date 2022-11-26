@@ -1,9 +1,3 @@
-/*
- * @Desc:
- * @Author: JacksonZhou
- * @Date: 2022/03/15
- * @LastEditTime: 2022/03/15
- */
 // FIXME 暂不支持 alias 导入
 import { add } from '../../utils';
 

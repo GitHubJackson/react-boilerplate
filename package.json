@@ -75,6 +75,7 @@
     "@commitlint/config-conventional": "^16.2.1",
     "@typescript-eslint/eslint-plugin": "^5.12.1",
     "@typescript-eslint/parser": "^5.12.1",
+    "chalk": "^4",
     "customize-cra-less-loader": "^2.0.0",
     "cz-conventional-changelog": "^3.3.0",
     "dotenv-cli": "^5.0.0",
@@ -91,6 +92,7 @@
     "nodemon": "^2.0.15",
     "postcss-less": "^6.0.0",
     "prettier": "^2.5.1",
+    "progress-bar-webpack-plugin": "^2.1.0",
     "style-resources-loader": "^1.5.0",
     "stylelint": "^14.5.3",
     "stylelint-config-standard": "^25.0.0"

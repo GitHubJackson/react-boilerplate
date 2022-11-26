@@ -1,10 +1,3 @@
-/*
- * @Desc:
- * @Author: JacksonZhou
- * @Date: 2022/03/15
- * @LastEditTime: 2022/03/15
- */
-// helper/utils/service.ts
 import axios from 'axios';
 
 export const service = axios.create({

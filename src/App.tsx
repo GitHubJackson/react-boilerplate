@@ -1,9 +1,3 @@
-/*
- * @Desc:
- * @Author: JacksonZhou
- * @Date: 2022/02/26
- * @LastEditTime: 2022/03/15
- */
 import { Suspense } from 'react';
 import {
   BrowserRouter as Router,

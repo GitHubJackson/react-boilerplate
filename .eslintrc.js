@@ -1,9 +1,3 @@
-/*
- * @Desc:
- * @Author: JacksonZhou
- * @Date: 2022/02/27
- * @LastEditTime: 2022/03/13
- */
 module.exports = {
   env: {
     browser: true,

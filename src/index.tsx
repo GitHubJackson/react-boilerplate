@@ -1,9 +1,3 @@
-/*
- * @Desc:
- * @Author: JacksonZhou
- * @Date: 2022/02/27
- * @LastEditTime: 2022/03/15
- */
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
@@ -12,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 
 import * as Sentry from '@sentry/react';
 import { BrowserTracing } from '@sentry/tracing';
+import { showProjectInfo } from './utils';
 
 Sentry.init({
   dsn: 'https://eaf26a5a35274ed481557fadbbac7ace@o1104041.ingest.sentry.io/6259158',
@@ -28,6 +23,10 @@ ReactDOM.render(
     <App />
   </React.StrictMode>,
   document.getElementById('root'),
+  () => {
+    // show project info in console
+    showProjectInfo();
+  },
 );
 
 // If you want to start measuring performance in your app, pass a function

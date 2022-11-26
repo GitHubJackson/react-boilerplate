@@ -1,9 +1,3 @@
-/*
- * @Desc:
- * @Author: JacksonZhou
- * @Date: 2022/03/15
- * @LastEditTime: 2022/04/26
- */
 // import { useRequest } from 'ahooks';
 // import { getUserList } from '@/service/api/user';
 import Counter from '@/components/counter';
