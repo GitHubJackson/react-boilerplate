@@ -33,18 +33,21 @@
     "build:test": "dotenv -e env/.env.test react-app-rewired build",
     "build": "dotenv -e env/.env.prod react-app-rewired build",
     "build:prod": "dotenv -e env/.env.prod react-app-rewired build",
+    "build:analyzer": "react-app-rewired build --stats && webpack-bundle-analyzer build/bundle-stats.json -m static -r build/bundle-stats.html -O",
     "test": "react-app-rewired test",
     "mock": "nodemon src/mock/server.js",
     "eject": "react-scripts eject",
     "prepare": "husky install",
-    "eslint": "eslint --fix src/**/*.{js,ts,jsx,tsx}",
-    "stylelint": "stylelint --fix src/**/*.{css,less}",
+    "eslint": "eslint \"src/**/*.{js,jsx,ts,tsx}\"",
+    "eslint:fix": "eslint --fix \"src/**/*.{js,jsx,ts,tsx}\"",
+    "stylelint": "stylelint src/**/*.{css,less}",
+    "stylelint:fix": "stylelint --fix src/**/*.{css,less}",
     "prettier": "prettier --write src/**/*.{js,ts,jsx,tsx,less,css}"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx}": [
       "prettier --write",
-      "eslint --cache --fix",
+      "eslint --cache",
       "git add"
     ],
     "src/**/*.{less,css}": [
@@ -95,7 +98,8 @@
     "progress-bar-webpack-plugin": "^2.1.0",
     "style-resources-loader": "^1.5.0",
     "stylelint": "^14.5.3",
-    "stylelint-config-standard": "^25.0.0"
+    "stylelint-config-standard": "^25.0.0",
+    "webpack-bundle-analyzer": "^4.7.0"
   },
   "config": {
     "commitizen": {

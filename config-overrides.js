@@ -8,13 +8,15 @@ const {
 } = require('customize-cra');
 const chalk = require('chalk');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
-
+const BundleAnalyzerPlugin =
+  require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const path = require('path');
 const addLessLoader = require('customize-cra-less-loader');
 const exec = require('child_process').execSync;
+const pkg = require('./package.json');
 
-process.env.REACT_APP_NAME = require('./package.json').name;
-process.env.REACT_APP_VERSION = require('./package.json').version;
+process.env.REACT_APP_NAME = pkg.name;
+process.env.REACT_APP_VERSION = pkg.version;
 process.env.REACT_APP_BUILD_TIME = new Date().toLocaleString('zh-CN', {
   hour12: false,
 });
@@ -55,6 +57,7 @@ module.exports = {
       new ProgressBarPlugin({
         format: `  :msg [:bar] ${chalk.green.bold(':percent')} (:elapsed s)`,
       }),
+      new BundleAnalyzerPlugin(),
     ),
   ),
 };
